@@ -1,10 +1,10 @@
 <template>
-  <div></div>
+  <div />
 </template>
 
 <script>
 export default {
-  name: 'CallToAction.vue',
+  name: 'CallToAction',
   props: {
     title: String,
     subtitle: String,
@@ -13,7 +13,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

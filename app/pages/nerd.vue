@@ -1,54 +1,65 @@
 <template>
   <div>
-    <FullPageLoader :states="states" @onCompleteLoad="onCompleteLoad" v-if="showLoader" />
-    <div v-if="!showLoader" class="nerd-page">
-      <!-- Nerd -->
+    <ClientOnly>
+      <UtilitiesFullPageLoader
+        v-if="showLoader"
+        :states="states"
+        @on-complete-load="onCompleteLoad"
+      />
+    </ClientOnly>
+    <div
+      v-show="!showLoader"
+      class="nerd-page"
+    >
       <div class="bg-gray-500">
-        <FeaturedQuote
-            quote="A computer would deserve to be called intelligent if it could deceive a human into believing that it was human."
-            author="Alan Turing"
-            color="#f7fafc"
-            font="Menlo, Monaco, Consolas, 'Courier New', monospace"
-            :authorAppearDelay="8000" />
+        <UtilitiesFeaturedQuote
+          quote="A computer would deserve to be called intelligent if it could deceive a human into believing that it was human."
+          author="Alan Turing"
+          color="#f7fafc"
+          font="Menlo, Monaco, Consolas, 'Courier New', monospace"
+          :author-appear-delay="8000"
+        />
       </div>
       <div class="bg-white">
         <div class="container mx-auto">
-          <SectionHeading title="The Nerd" description="That above quote brings me West World flashbacks, and as a smooth segue, here below are the technologies I use every day:"/>
+          <UtilitiesSectionHeading
+            title="The Nerd"
+            description="That above quote brings me West World flashbacks, and as a smooth segue, here below are the technologies I use every day:"
+          />
           <section class="flex flex-row flex-wrap">
-            <Card :title="card.title" :label="card.type" :img-path="card.imgPath" :description="card.description"  v-for="card in cards" v-bind:key="card.title" />
+            <UtilitiesCard
+              v-for="card in cards"
+              :key="card.title"
+              :title="card.title"
+              :label="card.type"
+              :img-path="card.imgPath"
+              :description="card.description"
+            />
           </section>
         </div>
       </div>
       <div class="bg-blue-500">
-        <FeaturedQuote
-            quote="Don’t try to be original, just try to be good."
-            author="Paul Rand"
-            color="#f7fafc"
-            :author-appear-delay="8000"
-            :mobile-max-chars="12"
-            :disable-scroll-down="true"
+        <UtilitiesFeaturedQuote
+          quote="Don’t try to be original, just try to be good."
+          author="Paul Rand"
+          color="#f7fafc"
+          :author-appear-delay="8000"
+          :mobile-max-chars="12"
+          :disable-scroll-down="true"
         />
       </div>
     </div>
   </div>
 </template>
-<!-- da-->
+
 <script>
-import FullPageLoader from './../utilities/FullPageLoader'
-import SectionHeading from '../utilities/SectionHeading'
-import FeaturedQuote from '../utilities/FeaturedQuote'
-import Card from '../utilities/Card'
 export default {
   name: 'NerdPage',
-  components: {
-    FullPageLoader,
-    SectionHeading,
-    FeaturedQuote,
-    Card
-  },
   data () {
     return {
-      showLoader: true,
+      // false during SSR so static HTML includes full page content;
+      // set true on client mount for the original loading-screen UX.
+      showLoader: false,
       states: [
         'Fetching latest content from Amazon Cloudfront',
         'Inflating HackerRank score',
@@ -62,7 +73,6 @@ export default {
           description: 'The language and community I thank my career for.',
           type: 'Back-end'
         },
-
         {
           title: 'Vue.js',
           imgPath: '/images/logos/vue.png',
@@ -132,8 +142,11 @@ export default {
       ]
     }
   },
+  mounted () {
+    this.showLoader = true
+  },
   methods: {
-    onCompleteLoad: function () {
+    onCompleteLoad () {
       this.showLoader = false
     }
   }

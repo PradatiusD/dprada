@@ -46,8 +46,6 @@ body {
     background-attachment: fixed;
 }
 
-
-
 .creative-work-title {
     @apply font-display text-2xl leading-tight pt-10 mb-2;
 }
