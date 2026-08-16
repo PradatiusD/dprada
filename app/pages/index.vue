@@ -1,72 +1,109 @@
 <template>
-  <div class="container mx-auto">
-    <h1
-      class="text-white font-display text-center mt-8 text-5xl block"
-      :class="mainTitleAnimationState"
-    >
-      ¡Hola friend!
-    </h1>
-    <p
-      class="text-white font-body text-center text-xl"
-      :class="isMainSubtitleP1AnimationState"
-    >
-      It looks like you are looking for something.
-    </p>
-    <p
-      class="text-white font-body text-center mb-5 text-xl"
-      :class="isMainSubtitleP2AnimationState"
-    >
-      For me to first answer, I must know, who are you?
-    </p>
-    <div class="flex flex-col md:flex-row">
-      <UtilitiesNavButton
-        title="Nerd"
-        emoji="🤓"
-        hover-emoji="🧐"
-        description="Looking for technologies, tools, & an overview of what I finagle with?"
-        :animation-timeout="animationInterval * 4"
-        background-color="rgb(141, 10, 206)"
-        route="/nerd"
-        class="md:w-1/3 flex"
-      />
-      <UtilitiesNavButton
-        title="Wanderer"
-        emoji="😼"
-        hover-emoji="😻"
-        description="Are you a lover of quotes, history, economics, and just plain random things?"
-        :animation-timeout="animationInterval * 5"
-        background-color="rgb(106, 51, 239)"
-        route="/wanderer"
-        class="md:w-1/3 flex"
-      />
-      <UtilitiesNavButton
-        title="Creative"
-        emoji="😉"
-        hover-emoji="😃"
-        description="If stories are what drive you, go here."
-        :animation-timeout="animationInterval * 6"
-        background-color="rgb(107, 13, 249)"
-        route="/creative"
-        class="md:w-1/3 flex"
-      />
+  <div class="home-page">
+    <div class="container mx-auto home-hero">
+      <h1
+        class="text-white font-display text-center mt-8 text-5xl block"
+        :class="mainTitleAnimationState"
+      >
+        ¡Hola friend!
+      </h1>
+      <p
+        class="text-white font-body text-center text-xl"
+        :class="isMainSubtitleP1AnimationState"
+      >
+        These days the writing comes first.
+      </p>
+      <p
+        class="text-white font-body text-center mb-5 text-xl"
+        :class="isMainSubtitleP2AnimationState"
+      >
+        Start with the latest essay, then wander where you like.
+      </p>
+
+      <section
+        class="home-latest-article"
+        :class="latestArticleAnimationState"
+      >
+        <p class="home-kicker">
+          Latest article
+        </p>
+        <p class="home-latest-date">
+          {{ latestArticleDate }}
+        </p>
+        <h2 class="home-latest-title">
+          {{ latestArticle.title }}
+        </h2>
+        <p class="home-latest-excerpt">
+          {{ latestArticle.excerpt }}
+        </p>
+        <NuxtLink
+          class="home-latest-link"
+          :to="`/blog/${latestArticle.slug}`"
+        >
+          Read “{{ latestArticle.title }}”
+          <font-awesome-icon icon="arrow-right" />
+        </NuxtLink>
+      </section>
+
+      <div
+        class="home-secondary-links"
+        :class="secondaryLinksAnimationState"
+      >
+        <NuxtLink to="/blog">
+          All writing
+        </NuxtLink>
+        <NuxtLink to="/nerd">
+          Nerd
+        </NuxtLink>
+        <NuxtLink to="/wanderer">
+          Wanderer
+        </NuxtLink>
+        <NuxtLink to="/creative">
+          Creative
+        </NuxtLink>
+      </div>
+
+      <UtilitiesSocialLinks :animation-timeout="animationInterval * 7" />
     </div>
+
+
+    <UtilitiesFeaturedQuote
+      :quote="latestArticle.featuredQuote.quote"
+      :author="latestArticle.featuredQuote.author"
+      color="white"
+      :author-appear-delay="8000"
+      :disable-scroll-down="true"
+      class="bg-indigo-900"
+      pattern="topography"
+      :pattern-opacity="0.08"
+    />
   </div>
 </template>
 
 <script>
 import { SVG } from '@svgdotjs/svg.js'
+import { blogArticles, formatBlogDate } from '~/data/blog'
 
 export default {
   name: 'HomeNavigator',
   data () {
     return {
+      articles: blogArticles,
       isMainTitleAnimated: false,
       isMainSubtitleAnimatedP1: false,
       isMainSubtitleAnimatedP2: false,
+      isLatestArticleAnimated: false,
+      isSecondaryLinksAnimated: false,
       animationInterval: 1000
     }
   },
   computed: {
+    latestArticle () {
+      return this.articles[0]
+    },
+    latestArticleDate () {
+      return formatBlogDate(this.latestArticle.publishedAt)
+    },
     mainTitleAnimationState () {
       return this.getAnimationKeys('isMainTitleAnimated')
     },
@@ -75,6 +112,12 @@ export default {
     },
     isMainSubtitleP2AnimationState () {
       return this.getAnimationKeys('isMainSubtitleAnimatedP2')
+    },
+    latestArticleAnimationState () {
+      return this.getAnimationKeys('isLatestArticleAnimated')
+    },
+    secondaryLinksAnimationState () {
+      return this.getAnimationKeys('isSecondaryLinksAnimated')
     }
   },
   mounted () {
@@ -88,6 +131,12 @@ export default {
     setTimeout(() => {
       this.isMainSubtitleAnimatedP2 = true
     }, this.animationInterval * 3)
+    setTimeout(() => {
+      this.isLatestArticleAnimated = true
+    }, this.animationInterval * 4)
+    setTimeout(() => {
+      this.isSecondaryLinksAnimated = true
+    }, this.animationInterval * 5)
   },
   beforeUnmount () {
     const playground = document.getElementById('playground')
@@ -135,5 +184,118 @@ export default {
   top: 0;
   left: 0;
   z-index: -100;
+}
+
+.home-page {
+  color: #f8f1e5;
+}
+
+.home-hero {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-latest-article {
+  width: min(100%, 48rem);
+  margin: 2rem auto 0;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 1.5rem;
+  background: rgba(17, 11, 34, 0.34);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 22px 60px rgba(7, 4, 19, 0.24);
+}
+
+.home-kicker {
+  font-family: "Trend W01 Sns One", "sans-serif";
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(248, 241, 229, 0.68);
+}
+
+.home-kicker-dark {
+  color: rgba(38, 27, 23, 0.56);
+}
+
+.home-latest-date {
+  margin-top: 1rem;
+  font-family: "Sofia W01 Bold1446843", "sans-serif";
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(248, 241, 229, 0.72);
+}
+
+.home-latest-title,
+.home-feed-title {
+  font-family: "Trend W01 Sns One", "sans-serif";
+}
+
+.home-latest-title {
+  margin-top: 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 0.98;
+}
+
+.home-latest-excerpt {
+  margin-top: 1rem;
+  font-family: "Sofia W01 Regular1446825", "sans-serif";
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(248, 241, 229, 0.82);
+}
+
+.home-latest-link,
+.home-secondary-links a {
+  transition: color 180ms ease;
+}
+
+.home-latest-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  font-family: "Trend W01 Sns One", "sans-serif";
+  color: #fff8ea;
+}
+
+.home-latest-link:hover,
+.home-secondary-links a:hover {
+  color: #f8c68d;
+}
+
+.home-secondary-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "Trend W01 Sns One", "sans-serif";
+  color: rgba(248, 241, 229, 0.9);
+}
+
+.home-article-feed {
+  background: rgba(255, 248, 236, 0.96);
+  color: #261b17;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.home-feed-header {
+  margin-bottom: 2rem;
+}
+
+.home-feed-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #261b17;
+}
+
+@media screen and (max-width: 767px) {
+  .home-latest-article {
+    padding: 1.25rem;
+  }
 }
 </style>

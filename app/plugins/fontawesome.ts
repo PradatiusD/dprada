@@ -9,6 +9,11 @@ import {
   faAtom,
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  faXTwitter,
+  faInstagram,
+  faLinkedinIn
+} from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 // CSS is imported above; prevent Font Awesome from injecting its own.
@@ -21,7 +26,10 @@ library.add(
   faGrinHearts,
   faCog,
   faAtom,
-  faArrowDown
+  faArrowDown,
+  faXTwitter,
+  faInstagram,
+  faLinkedinIn
 )
 
 export default defineNuxtPlugin((nuxtApp) => {

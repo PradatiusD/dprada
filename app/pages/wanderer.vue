@@ -3,7 +3,7 @@
     <ClientOnly>
       <UtilitiesFullPageLoader
         v-if="showLoader"
-        :states="states"
+        :joke="joke"
         @on-complete-load="onCompleteLoad"
       />
     </ClientOnly>
@@ -91,10 +91,11 @@ export default {
   data () {
     return {
       showLoader: false,
-      states: [
+      joke: '',
+      jokes: [
         'Fetching my favorite quotes',
         'Rereading the actually funny Cards Against Humanity',
-        'Heating up \n the 🔥 emoji',
+        'Heating up the 🔥 emoji',
         'Using demographic data to increase probabilities of sounding cool'
       ],
       activities: [
@@ -144,6 +145,7 @@ export default {
     }
   },
   mounted () {
+    this.joke = this.jokes[Math.floor(Math.random() * this.jokes.length)]
     this.showLoader = true
   },
   methods: {

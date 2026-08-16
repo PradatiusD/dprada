@@ -3,7 +3,7 @@
     <ClientOnly>
       <UtilitiesFullPageLoader
         v-if="showLoader"
-        :states="states"
+        :joke="joke"
         @on-complete-load="onCompleteLoad"
       />
     </ClientOnly>
@@ -138,7 +138,8 @@ export default {
   data () {
     return {
       showLoader: false,
-      states: [
+      joke: '',
+      jokes: [
         'Finding closest unicorn, arepa, or croqueta',
         'Copying the Sims 3 loading jokes',
         'Wondering about what "Tinder for dogs" looks like',
@@ -148,6 +149,7 @@ export default {
     }
   },
   mounted () {
+    this.joke = this.jokes[Math.floor(Math.random() * this.jokes.length)]
     this.showLoader = true
   },
   methods: {

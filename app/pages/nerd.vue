@@ -3,7 +3,7 @@
     <ClientOnly>
       <UtilitiesFullPageLoader
         v-if="showLoader"
-        :states="states"
+        :joke="joke"
         @on-complete-load="onCompleteLoad"
       />
     </ClientOnly>
@@ -60,7 +60,8 @@ export default {
       // false during SSR so static HTML includes full page content;
       // set true on client mount for the original loading-screen UX.
       showLoader: false,
-      states: [
+      joke: '',
+      jokes: [
         'Fetching latest content from Amazon Cloudfront',
         'Inflating HackerRank score',
         'Giving up on Webpack config',
@@ -143,6 +144,7 @@ export default {
     }
   },
   mounted () {
+    this.joke = this.jokes[Math.floor(Math.random() * this.jokes.length)]
     this.showLoader = true
   },
   methods: {

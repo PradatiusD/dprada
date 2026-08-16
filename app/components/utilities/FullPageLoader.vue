@@ -37,16 +37,27 @@
 export default {
   name: 'FullPageLoader',
   props: {
-    states: Array
+    /** Single loading joke / message to show for the whole screen. */
+    joke: {
+      type: String,
+      default: 'Loading'
+    },
+    /** Total time the loader stays up before completing (ms). */
+    duration: {
+      type: Number,
+      default: 2500
+    }
   },
   emits: ['onCompleteLoad'],
   data () {
     return {
       icon: 'fan',
       icons: ['fan', 'snowflake', 'grin-hearts', 'cog', 'atom'],
-      iterator: 0,
       barWidth: 0,
-      activeMessage: 'Loading',
+      activeMessage: '',
+      dotsTimer: null,
+      progressTimer: null,
+      completeTimer: null,
       // Defaults used during SSR / static generate; updated on mount.
       backgroundAnimation: {
         columns: 12,
@@ -59,28 +70,40 @@ export default {
       columns: parseInt(window.innerWidth / 100, 10) || 12,
       rows: parseInt(window.innerHeight / 100, 10) || 8
     }
-    this.changeActiveMessage()
+    this.icon = this.icons[Math.floor(Math.random() * this.icons.length)]
+    this.activeMessage = this.joke
+    this.startLoader()
+  },
+  beforeUnmount () {
+    clearInterval(this.dotsTimer)
+    clearInterval(this.progressTimer)
+    clearTimeout(this.completeTimer)
   },
   methods: {
-    changeActiveMessage () {
-      setTimeout(() => {
-        this.iterator++
-        const maxDots = 4
-        if (this.iterator % maxDots === 0) {
-          this.barWidth = 100
-          this.activeMessage = this.states[this.iterator / maxDots]
-          this.icon = this.icons[(this.iterator / maxDots) % this.icons.length]
-        } else {
-          this.barWidth = (this.iterator % maxDots / maxDots) * 100
-          this.activeMessage = this.activeMessage + '.'
-        }
+    startLoader () {
+      let dots = 0
+      this.dotsTimer = setInterval(() => {
+        dots = (dots + 1) % 4
+        this.activeMessage = this.joke + '.'.repeat(dots)
+      }, 400)
 
-        if ((this.iterator / maxDots) + 1 / maxDots < this.states.length) {
-          this.changeActiveMessage()
-        } else {
-          this.$emit('onCompleteLoad')
+      const tickMs = 50
+      const steps = Math.max(1, Math.floor(this.duration / tickMs))
+      let step = 0
+      this.progressTimer = setInterval(() => {
+        step += 1
+        this.barWidth = Math.min(100, (step / steps) * 100)
+        if (step >= steps) {
+          clearInterval(this.progressTimer)
         }
-      }, 1000)
+      }, tickMs)
+
+      this.completeTimer = setTimeout(() => {
+        clearInterval(this.dotsTimer)
+        clearInterval(this.progressTimer)
+        this.barWidth = 100
+        this.$emit('onCompleteLoad')
+      }, this.duration)
     }
   }
 }
@@ -118,9 +141,7 @@ export default {
   width: 30%;
   position: fixed;
   bottom: 0;
-  transition: all;
-  transition-duration: 0.8s;
-  transition-timing-function: linear;
+  transition: width 0.05s linear;
 }
 
 .loader-page-pattern {
