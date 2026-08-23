@@ -1,26 +1,34 @@
 ---
 title: On the Sins of Our Time
-publishedAt: 2026-08-16
-excerpt: A first reflection on how apathy, disconnection, and disinterest quietly shape the age we live in.
+publishedAt: 2026-08-23T18:00:00Z
+excerpt: A reflection on how apathy and distraction quietly sap our souls how we should view passion and boredom as the virtues for the future generations to espouse.
 featuredQuote: “The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference.”
 featuredAuthor: Elie Wiesel
 featuredSource: 
 ---
 
-Apathy disinterest disconnection we wake up and open apps tell us what to think or react to in which order we open our laptops and now ask machines to do the thinking for us
+Apathy, disinterest, disconnection, isolation.
 
-Even as I use AI now to dramatically increase my output iron torn wandering if the awesome increase in the productivity is worth the cognitive decline of my mind at the same time life is so short and well I really miss managing config files on a Sunday morning?
+We wake up and stare at our hand mirrors with walls of information telling us what to think or react to in which order–sorted by most probably to keep us drawn in. 
 
-I'm less concerned over the exponential increase in artificial intelligence but rather the logarithmic decay our own minds of our own writing of our own thinking
+Many of us head to work, and open our laptops, and increasingly ask machines to think for us. 
 
-Sure there will be the people will push the limits of models and data sets way that we could never think but I wonder for the average person instead of picking a book of their topic enjoying it in solace of others opinions is now forced at an algorithm that is the matchup between a data center and multi by algorithm pointed at a brain remotely distant from primate.
+Even as I use AI now to dramatically increase my output I live a torn day, wondering if the awesome increase in the productivity is worth the cognitive decline of my generation.
 
-One communication was difficult through letters and male I could get lost missed or stolen communication seemed so enthralling but now as our means of communication have exploded we reach out to each other less and less
+At the same time, life is so brief, and we only have so much time to present true focus. Will I really miss managing config files on a Sunday morning?  I'm sure that the developers of before struggling to get basic websites and apps from books, poorly written documentation, no widespread forums, would have cherished to multiply their ideas into reality–spending less time using a picking axe, and more time mining their mountains of ideas.
 
-In an age of distraction it almost feels like boredom is a virtue because it implies that you've consciously stood away from the things that will rob you of a five minute walk in the park here and there.
+At the same time, I'm less concerned over the exponential increase in artificial intelligence but rather the logarithmic decay of our own minds, of our own writing, of our own thinking.
 
-If Covid showed me what disconnection can do for cognitive development of young babies academically what will it do when it's fully taken effect.
+Sure there will be the people will push the limits of models and data sets way that we could never think, but I wonder for the average person instead of picking a book of their topic enjoying it in solace of their mind, opinions are now shoved into our minds as the impossible contest between a behemoth of a data center and an enormously well-tested precise algorithm pointed directly at a brain remotely distant from primate.
 
-I feel often surrounded by pessimist or Luddite that fear a world were thinking and computation is made faster and easier for everyone two Optimus the claim all illnesses will be solved and there won't be any real impact not only society but to the future generations of humans.
+One communication was difficult through letters and male I could get lost missed or stolen communication seemed so enthralling but now as our means of communication have exploded we reach out to each other less and less.
 
-Today we live in an exciting collective bittersweet time and it's such an honor to be part of it.
+In an age of distraction, it almost feels like boredom is a virtue because it implies that you've consciously stood away from the things that will rob you of a 5-minute walk in the park here, of a moment of watching the leaves rustle amidst the breeze.
+
+If Covid showed me what disconnection can do for cognitive development of young babies in every domain what will it do when it's fully taken effect.
+
+I often feel surrounded by pessimist or Luddite types that fear a world were thinking and computation is made faster and easier that society will be jobless, abjectly poor, and social disarray.  Then we have these dreamy optimists, that claim all illnesses will be solved and there won't be any real impact not only society but to the future generations of humans.
+
+Today we live in an exciting, may I say _delicious_ collective bittersweetness and it's such an honor to be part of it.
+
+How will I look back on this?

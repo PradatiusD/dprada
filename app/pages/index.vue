@@ -20,27 +20,27 @@
         Start with the latest essay, then wander where you like.
       </p>
 
+
       <section
         class="home-latest-article"
         :class="latestArticleAnimationState"
+        v-for="article in articles"
+        :key="article.slug"
       >
-        <p class="home-kicker">
-          Latest article
-        </p>
         <p class="home-latest-date">
-          {{ latestArticleDate }}
+          {{ article.publishedAt | formatDate() }}
         </p>
         <h2 class="home-latest-title">
-          {{ latestArticle.title }}
+          {{ article.title }}
         </h2>
         <p class="home-latest-excerpt">
-          {{ latestArticle.excerpt }}
+          {{ article.excerpt }}
         </p>
         <NuxtLink
           class="home-latest-link"
           :to="`/blog/${latestArticle.slug}`"
         >
-          Read “{{ latestArticle.title }}”
+          Read
           <font-awesome-icon icon="arrow-right" />
         </NuxtLink>
       </section>
@@ -83,6 +83,7 @@
 <script>
 import { SVG } from '@svgdotjs/svg.js'
 import { blogArticles, formatBlogDate } from '~/data/blog'
+import {formatDate} from "compatx";
 
 export default {
   name: 'HomeNavigator',
@@ -145,6 +146,9 @@ export default {
     }
   },
   methods: {
+    formatDate() {
+      return formatDate
+    },
     getAnimationKeys (key) {
       return {
         'transition-all duration-500 ease-in-out transform': true,
@@ -237,7 +241,7 @@ export default {
 
 .home-latest-title {
   margin-top: 0.75rem;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
   line-height: 0.98;
 }
 

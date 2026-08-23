@@ -131,7 +131,7 @@ function normalizeParagraph (text: string) {
 }
 
 function renderMarkdownBlock (block: string) {
-  const lines = block.split('\n')
+  const lines = block.split('\n') as string[]
 
   if (/^###\s+/.test(lines[0])) {
     return `<h3>${applyInlineMarkdown(lines[0].replace(/^###\s+/, ''))}</h3>`
@@ -223,14 +223,14 @@ function parseBlogArticle (path: string, source: string): BlogArticle {
   }
 
   return {
-    slug,
-    title: attributes.title,
-    publishedAt: attributes.publishedAt,
-    excerpt: attributes.excerpt,
+    slug: slug as string,
+    title: attributes.title as string,
+    publishedAt: attributes.publishedAt as string,
+    excerpt: attributes.excerpt as string,
     featuredQuote: {
-      quote: attributes.featuredQuote,
-      author: attributes.featuredAuthor,
-      source: attributes.featuredSource || undefined
+      quote: attributes.featuredQuote as string,
+      author: attributes.featuredAuthor as string,
+      source: attributes.featuredSource as string || undefined
     },
     content: body,
     contentBlocks: markdownToContentBlocks(body)
