@@ -1,3 +1,14 @@
+import { readdirSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+function getBlogArticleRoutes () {
+  const blogDirectory = resolve(process.cwd(), 'app/content/blog')
+
+  return readdirSync(blogDirectory)
+    .filter(file => file.endsWith('.md'))
+    .map(file => `/blog/${file.replace(/\.md$/, '')}`)
+}
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -75,7 +86,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/nerd', '/wanderer', '/creative']
+      routes: ['/', '/nerd', '/wanderer', '/creative', '/blog', ...getBlogArticleRoutes()]
     }
   },
 

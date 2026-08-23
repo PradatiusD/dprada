@@ -459,6 +459,164 @@ body {
     color: rgba(38, 27, 23, 0.64);
 }
 
+.country-debt-chart {
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    border: 1px solid rgba(38, 27, 23, 0.12);
+    border-radius: 1.5rem;
+    background:
+        radial-gradient(circle at top left, rgba(114, 159, 255, 0.22), transparent 26%),
+        linear-gradient(180deg, rgba(255, 251, 243, 0.97), rgba(243, 237, 227, 0.97));
+}
+
+.country-debt-chart-kicker,
+.country-debt-chart-title,
+.country-debt-chart-callout-label,
+.country-debt-chart-row-rank,
+.country-debt-chart-row-country h3 {
+    font-family: "Trend W01 Sns One", "sans-serif";
+}
+
+.country-debt-chart-kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(38, 27, 23, 0.52);
+}
+
+.country-debt-chart-title {
+    margin-top: 0.75rem;
+    font-size: clamp(1.6rem, 4vw, 2.7rem);
+    line-height: 1.02;
+    max-width: 14ch;
+}
+
+.country-debt-chart-copy,
+.country-debt-chart-note,
+.country-debt-chart-callout,
+.country-debt-chart-row-country p,
+.country-debt-chart-bar-value {
+    font-family: "Sofia W01 Regular1446825", "sans-serif";
+}
+
+.country-debt-chart-copy {
+    margin-top: 0.9rem;
+    max-width: 44rem;
+    line-height: 1.75;
+    color: rgba(38, 27, 23, 0.78);
+}
+
+.country-debt-chart-callout {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    background: rgba(38, 82, 204, 0.1);
+    color: #1f2557;
+}
+
+.country-debt-chart-callout strong {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.country-debt-chart-list {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+.country-debt-chart-row {
+    display: grid;
+    grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    padding: 0.95rem 1rem;
+    border-radius: 1.15rem;
+    background: rgba(255, 255, 255, 0.58);
+}
+
+.country-debt-chart-row-us {
+    border: 1px solid rgba(38, 82, 204, 0.2);
+    background: rgba(41, 82, 204, 0.08);
+}
+
+.country-debt-chart-row-meta {
+    display: flex;
+    gap: 0.85rem;
+    align-items: baseline;
+}
+
+.country-debt-chart-row-rank {
+    min-width: 2.25rem;
+    font-size: 1rem;
+    color: rgba(38, 27, 23, 0.6);
+}
+
+.country-debt-chart-row-country h3 {
+    font-size: 1.05rem;
+    line-height: 1.15;
+    color: #261b17;
+}
+
+.country-debt-chart-row-country p {
+    margin-top: 0.25rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: rgba(38, 27, 23, 0.64);
+}
+
+.country-debt-chart-bar-shell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 2.4rem;
+    padding-right: 4.5rem;
+    border-radius: 999px;
+    background: rgba(38, 27, 23, 0.07);
+    overflow: hidden;
+}
+
+.country-debt-chart-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #2952cc, #5b84ff);
+}
+
+.country-debt-chart-row-us .country-debt-chart-bar {
+    background: linear-gradient(90deg, #8b4513, #d58632);
+}
+
+.country-debt-chart-bar-value {
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    padding-right: 1rem;
+    font-size: 0.95rem;
+    color: #261b17;
+}
+
+.country-debt-chart-note {
+    margin-top: 1rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: rgba(38, 27, 23, 0.64);
+}
+
+@media screen and (max-width: 767px) {
+    .country-debt-chart-row {
+        grid-template-columns: 1fr;
+    }
+
+    .country-debt-chart-bar-shell {
+        min-height: 2.2rem;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .blog-hero {
         padding-top: 6rem;
