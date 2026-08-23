@@ -14,10 +14,12 @@
 </template>
 
 <script>
+import CirculatingCurrencyChart from '~/components/blog/shortcodes/CirculatingCurrencyChart.vue'
 import DebtToGdpDefaultsBarChart from '~/components/blog/shortcodes/DebtToGdpDefaultsBarChart.vue'
 import NationalDebtGoldChart from '~/components/blog/shortcodes/NationalDebtGoldChart.vue'
 
 const SHORTCODE_COMPONENTS = {
+  CirculatingCurrencyChart,
   NationalDebtGoldChart,
   DebtToGdpDefaultsBarChart
 }

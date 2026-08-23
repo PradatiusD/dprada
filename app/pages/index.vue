@@ -38,7 +38,7 @@
         </p>
         <NuxtLink
           class="home-latest-link"
-          :to="`/blog/${latestArticle.slug}`"
+          :to="`/blog/${article.slug}`"
         >
           Read
           <font-awesome-icon icon="arrow-right" />

@@ -13,4 +13,6 @@ We keep on accepting inflation as a normal, but if anything, prices should decre
 
 [NationalDebtGoldChart]
 
-Yet the debt keeps climbing.
+Yet the debt keeps climbing and the printing press has now put into circulation 5x more money.
+
+[CirculatingCurrencyChart]
