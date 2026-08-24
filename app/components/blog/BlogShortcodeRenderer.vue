@@ -16,10 +16,12 @@
 <script>
 import CirculatingCurrencyChart from '~/components/blog/shortcodes/CirculatingCurrencyChart.vue'
 import DebtToGdpDefaultsBarChart from '~/components/blog/shortcodes/DebtToGdpDefaultsBarChart.vue'
+import GiniCpiChart from '~/components/blog/shortcodes/GiniCpiChart.vue'
 import NationalDebtGoldChart from '~/components/blog/shortcodes/NationalDebtGoldChart.vue'
 
 const SHORTCODE_COMPONENTS = {
   CirculatingCurrencyChart,
+  GiniCpiChart,
   NationalDebtGoldChart,
   DebtToGdpDefaultsBarChart
 }

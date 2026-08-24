@@ -1,3 +1,5 @@
+import { markdownToHtml } from './markdown'
+
 export interface BlogQuoteOption {
   quote: string
   author: string
@@ -102,78 +104,6 @@ function parseFrontmatter (frontmatter: string) {
   }
 
   return attributes
-}
-
-function escapeHtml (value: string) {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;')
-}
-
-function applyInlineMarkdown (text: string) {
-  return escapeHtml(text)
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-}
-
-function normalizeParagraph (text: string) {
-  return text
-    .split('\n')
-    .map(line => line.trim())
-    .join(' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
-function renderMarkdownBlock (block: string) {
-  const lines = block.split('\n') as string[]
-
-  if (/^###\s+/.test(lines[0])) {
-    return `<h3>${applyInlineMarkdown(lines[0].replace(/^###\s+/, ''))}</h3>`
-  }
-
-  if (/^##\s+/.test(lines[0])) {
-    return `<h2>${applyInlineMarkdown(lines[0].replace(/^##\s+/, ''))}</h2>`
-  }
-
-  if (/^#\s+/.test(lines[0])) {
-    return `<h1>${applyInlineMarkdown(lines[0].replace(/^#\s+/, ''))}</h1>`
-  }
-
-  if (lines.every(line => /^>\s?/.test(line))) {
-    const quoteLines = lines.map(line => line.replace(/^>\s?/, ''))
-    return `<blockquote><p>${applyInlineMarkdown(normalizeParagraph(quoteLines.join('\n')))}</p></blockquote>`
-  }
-
-  if (lines.every(line => /^[-*]\s+/.test(line))) {
-    const items = lines
-      .map(line => `<li>${applyInlineMarkdown(line.replace(/^[-*]\s+/, ''))}</li>`)
-      .join('')
-    return `<ul>${items}</ul>`
-  }
-
-  if (lines.every(line => /^\d+\.\s+/.test(line))) {
-    const items = lines
-      .map(line => `<li>${applyInlineMarkdown(line.replace(/^\d+\.\s+/, ''))}</li>`)
-      .join('')
-    return `<ol>${items}</ol>`
-  }
-
-  return `<p>${applyInlineMarkdown(normalizeParagraph(block))}</p>`
-}
-
-function markdownToHtml (markdown: string) {
-  return markdown
-    .split(/\n\s*\n/)
-    .map(block => block.trim())
-    .filter(Boolean)
-    .map(renderMarkdownBlock)
-    .join('\n')
 }
 
 function markdownToContentBlocks (markdown: string) {
