@@ -31,9 +31,6 @@ To number of openings:
 
 [SoftwareDeveloperOpeningsChart]
 
-
-
-
 In 2025, all AI players mentioned in the chart below posted profits every year except for Oracle in 2022, when Oracle paid a lawsuit when CEO Mark Hurd left from Helwett Packard and then got sued due to the potential of him sharing trade secrets at a competitor.
 
 [AiCompanyProfitsChart]

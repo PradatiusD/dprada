@@ -62,6 +62,14 @@ export function markdownToHtml (markdown: string) {
       continue
     }
 
+    const setextUnderline = lines[index + 1]?.match(/^\s*(=+|-+)\s*$/)
+    if (setextUnderline) {
+      const level = setextUnderline[1]?.startsWith('=') ? 1 : 2
+      html.push(`<h${level}>${applyInlineMarkdown(line.trim())}</h${level}>`)
+      index += 2
+      continue
+    }
+
     if (/^```/.test(line)) {
       const codeLines: string[] = []
       index++
@@ -94,7 +102,13 @@ export function markdownToHtml (markdown: string) {
         quoteLines.push((lines[index] as string).replace(/^>\s?/, ''))
         index++
       }
-      html.push(`<blockquote><p>${applyInlineMarkdown(normalizeParagraph(quoteLines.join('\n')))}</p></blockquote>`)
+      const quoteParagraphs = quoteLines
+        .join('\n')
+        .split(/\n\s*\n/)
+        .map(normalizeParagraph)
+        .filter(Boolean)
+        .map(paragraph => `<p>${applyInlineMarkdown(paragraph)}</p>`)
+      html.push(`<blockquote>${quoteParagraphs.join('')}</blockquote>`)
       continue
     }
 

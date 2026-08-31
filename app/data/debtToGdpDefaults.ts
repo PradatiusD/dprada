@@ -1,23 +1,77 @@
-export interface DebtToGdpDefaultPoint {
-  rank: number
+export interface RecentSovereignDefaultPoint {
   country: string
   code: string
+  year: number
   debtToGdp: number
-  defaultEpisodesSince1960: number
-  isUnitedStates?: boolean
+  note: string
+  isReference?: boolean
 }
 
-export const debtToGdpDefaultsAsOf2026: DebtToGdpDefaultPoint[] = [
-  { rank: 1, country: 'Japan', code: 'JPN', debtToGdp: 204.351, defaultEpisodesSince1960: 0 },
-  { rank: 2, country: 'Singapore', code: 'SGP', debtToGdp: 171.936, defaultEpisodesSince1960: 0 },
-  { rank: 3, country: 'Sudan', code: 'SDN', debtToGdp: 169.078, defaultEpisodesSince1960: 1 },
-  { rank: 4, country: 'Bahrain', code: 'BHR', debtToGdp: 152.36, defaultEpisodesSince1960: 0 },
-  { rank: 5, country: 'Italy', code: 'ITA', debtToGdp: 138.384, defaultEpisodesSince1960: 0 },
-  { rank: 6, country: 'Greece', code: 'GRC', debtToGdp: 136.927, defaultEpisodesSince1960: 4 },
-  { rank: 7, country: 'Senegal', code: 'SEN', debtToGdp: 132.287, defaultEpisodesSince1960: 6 },
-  { rank: 8, country: 'Maldives', code: 'MDV', debtToGdp: 129.368, defaultEpisodesSince1960: 3 },
-  { rank: 9, country: 'United States', code: 'USA', debtToGdp: 125.781, defaultEpisodesSince1960: 0, isUnitedStates: true },
-  { rank: 10, country: 'Ukraine', code: 'UKR', debtToGdp: 122.563, defaultEpisodesSince1960: 3 }
+// General government gross debt in the default year, as a percentage of GDP.
+// Debt values use IMF World Economic Outlook indicator GGXWDG_NGDP.
+export const recentSovereignDefaults: RecentSovereignDefaultPoint[] = [
+  {
+    country: 'Lebanon',
+    code: 'LBN',
+    year: 2020,
+    debtToGdp: 150.583,
+    note: 'Eurobond payment default'
+  },
+  {
+    country: 'Suriname',
+    code: 'SUR',
+    year: 2020,
+    debtToGdp: 146.436,
+    note: 'External bond defaults'
+  },
+  {
+    country: 'Zambia',
+    code: 'ZMB',
+    year: 2020,
+    debtToGdp: 140.001,
+    note: 'External bond default'
+  },
+  {
+    country: 'United States',
+    code: 'USA',
+    year: 2025,
+    debtToGdp: 126.552,
+    note: '2025 reference · not in default',
+    isReference: true
+  },
+  {
+    country: 'Sri Lanka',
+    code: 'LKA',
+    year: 2022,
+    debtToGdp: 115.536,
+    note: 'External sovereign debt default'
+  },
+  {
+    country: 'Argentina',
+    code: 'ARG',
+    year: 2020,
+    debtToGdp: 103.816,
+    note: 'Foreign-currency debt default'
+  },
+  {
+    country: 'Ghana',
+    code: 'GHA',
+    year: 2022,
+    debtToGdp: 93.256,
+    note: 'Domestic and external restructuring'
+  },
+  {
+    country: 'Ecuador',
+    code: 'ECU',
+    year: 2020,
+    debtToGdp: 63.079,
+    note: 'External bond default'
+  },
+  {
+    country: 'Ethiopia',
+    code: 'ETH',
+    year: 2023,
+    debtToGdp: 37.972,
+    note: 'Missed Eurobond coupon'
+  }
 ]
-
-export const unitedStatesDebtToGdpRank2026 = 9

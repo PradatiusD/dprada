@@ -11,13 +11,17 @@ In 1926 a **single U.S. dollar** could buy a more than a **kilogram** of gold.  
 
 [NationalDebtGoldChart]
 
-Yet the average person is desensitized to inflation, accepting it as a normal fact of life.
+Yet the average person is completely desensitized to inflation, accepting it as a normal fact of life, watching their dollar less farther.  When I was a kid, the idea of a trillionaire was conceptually impossible, but only now, that the currency has been devalued so much can we reach the point that on June 12, 2026, Elon Musk became the first trillionaire.  The first billionaire, John, D. Rockefeller was estimated to become one in 1916, and if his wealth were in today's devalued currency, it is estimated be between 400-600 billion.
 
-_Think about it, if roughly the same amount of money exists, shouldn't things get cheaper as we get more productive? Continued price increases aren't normal._
+_Think about it, if roughly the same amount of money were to exist in an economy, shouldn't things get cheaper as we get more productive? Continued price increases aren't normal._
 
-Since the United States hasn't balanced a budget since Clinton, the government hides their debt by printing more money to buy its own debt, causing our debt to keep climing and the printing press has now put into circulation 5x more money.
+Since the United States hasn't balanced a budget since Clinton, the government hides their debt by printing more money to buy its own debt, causing our debt to keep climbing and that same printing press has now put into circulation 5x more money in my lifetime.
 
 [CirculatingCurrencyChart]
+
+Recent sovereign defaults show that there is no single debt-to-GDP number at which a country fails. Some entered default with debt above their entire annual economy; others failed at much lower ratios because the currency, creditor mix, reserves, and timing of payments also mattered.
+
+[DebtToGdpDefaultsBarChart]
 
 Whenever I explain inflation to people on the left-side of the political conversation, it usually doesn't seem like a problem to them.  They may cite some Paul Krugman article about how it helps drive purchases and lowers interest rates.
 
