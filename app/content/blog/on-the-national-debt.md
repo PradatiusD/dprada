@@ -7,25 +7,30 @@ featuredAuthor: Ludwig Von Mises
 featuredSource: Economic Freedom and Interventionism 
 ---
 
-Look at this chart below.  In 1926 a single dollar could buy a more than a _kilogram_ of gold.  Now it buys 0.00676 grams, so 147 times less valuable.
-
-We keep on accepting inflation as a normal, but if anything, prices should decrease with time if the same amount of money were in the economy as the world became vastly more productive making everything. 
+In 1926 a **single U.S. dollar** could buy a more than a **kilogram** of gold.  Now in 2026 that same dollar buys one **147th of a kilogram (0.00676 grams)**.  This continues to only worsen with time.
 
 [NationalDebtGoldChart]
 
-Yet the debt keeps climbing and the printing press has now put into circulation 5x more money.
+Yet the average person is desensitized to inflation, accepting it as a normal fact of life.
+
+_Think about it, if roughly the same amount of money exists, shouldn't things get cheaper as we get more productive? Continued price increases aren't normal._
+
+Since the United States hasn't balanced a budget since Clinton, the government hides their debt by printing more money to buy its own debt, causing our debt to keep climing and the printing press has now put into circulation 5x more money.
 
 [CirculatingCurrencyChart]
 
-Whenever I explain inflation to people on the left-side of the political conversation, it usually doesn't seem like a problem to them.
+Whenever I explain inflation to people on the left-side of the political conversation, it usually doesn't seem like a problem to them.  They may cite some Paul Krugman article about how it helps drive purchases and lowers interest rates.
 
-But income inequality, which is a major point of their concerns, is precisely exacerbated by the continued printing of money.
+But income inequality, which is a major point of their concerns, is precisely exacerbated by the continued printing of money against the exact people they wish to protect, the poor, the unbanked, the immigrant, the oppressed.
 
-Here you can see, that as the consumer price index went up (because of monetary expansion) society became increasingly unequal.
+But runaway inflation is by far the most damaging to those exact people, since they don't have their wealth protected in assets that survive inflation, like real-estate, precious metals, other currencies, etc.
 
-These correlating curves do not necessarily imply causation, but I do think that there is a strong case for it, because inflation hurts the poor the most, they have the hardest time adjusting to fixed per-hour incomes, whereas rich investors can always find ways to hedge inflation through other types of assets.
+On the following chart you can see, that as the consumer price index went up (because of monetary expansion) society became increasingly unequal.
+
+These correlating curves do not necessarily imply causation, but I do think that there is a strong case for it, because inflation hurts the poor the most, they have the hardest time adjusting to fixed per-hour incomes, whereas rich investors can always find ways to hedge inflation through other types of assets.  The institutions closest to the newly printed dollars (central banks, investment banks) and their customers/employees benefit most from this.
+
+Whereas the unbanked only see things get more expensive, and their rents go up faster than their wages.
 
 [GiniCpiChart]
-
 
 The 17th century French Economist [Richard Cantillon](https://www.swfinstitute.org/news/89070/what-is-the-cantillon-effect-and-why-its-even-more-important-now) articulated this concept on _An Essay on Economic Theory_, where the first people to receive the newly printed money (financial institutions, for example) benefitted the most from it.  As the newly printed money cascaded into higher prices through the economy, the day-laborer that lives off a fixed income is the last to see his wage go up.

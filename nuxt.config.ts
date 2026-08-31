@@ -24,7 +24,9 @@ export default defineNuxtConfig({
     cssPath: '~/assets/styles/index.css',
     configPath: 'tailwind.config.js'
   },
-
+  devServer: {
+    port: 3001
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'en' },

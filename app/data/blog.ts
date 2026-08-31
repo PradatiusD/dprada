@@ -11,6 +11,7 @@ export interface BlogArticle {
   title: string
   publishedAt: string
   excerpt: string
+  ogImage: string
   featuredQuote: BlogQuoteOption
   content: string
   contentBlocks: BlogContentBlock[]
@@ -157,6 +158,7 @@ function parseBlogArticle (path: string, source: string): BlogArticle {
     title: attributes.title as string,
     publishedAt: attributes.publishedAt as string,
     excerpt: attributes.excerpt as string,
+    ogImage: `/images/og/blog/${slug}.png`,
     featuredQuote: {
       quote: attributes.featuredQuote as string,
       author: attributes.featuredAuthor as string,

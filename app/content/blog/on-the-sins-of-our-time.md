@@ -9,19 +9,21 @@ featuredSource:
 
 Apathy, disinterest, disconnection, isolation.
 
-We wake up and stare at our hand mirrors with walls of information telling us what to think or react to in which order–sorted by most probably to keep us drawn in. 
+We wake up and stare at our hand mirrors with walls of information telling us what to think or react to in which order – sorted by most probably to keep us drawn in.
 
-Many of us head to work, and open our laptops, and increasingly ask machines to think for us. 
+Many of us head to work, open our laptops, and increasingly ask machines to think for us.
 
 Even as I use AI now to dramatically increase my output I live a torn day, wondering if the awesome increase in the productivity is worth the cognitive decline of my generation.
 
-At the same time, life is so brief, and we only have so much time to present true focus. Will I really miss managing config files on a Sunday morning?  I'm sure that the developers of before struggling to get basic websites and apps from books, poorly written documentation, no widespread forums, would have cherished to multiply their ideas into reality–spending less time using a picking axe, and more time mining their mountains of ideas.
+At the same time, life is so brief, and we only have so much time to present true focus. Will I really miss managing config files on a Sunday morning?
+
+I'm sure that the developers of before **struggling** to get basic websites and apps from books, poorly written documentation, no widespread forums, would have cherished to multiply their ideas into reality–spending less time using a picking axe, and more time mining their mountains of ideas.
 
 At the same time, I'm less concerned over the exponential increase in artificial intelligence but rather the logarithmic decay of our own minds, of our own writing, of our own thinking.
 
 Sure there will be the people will push the limits of models and data sets way that we could never think, but I wonder for the average person instead of picking a book of their topic enjoying it in solace of their mind, opinions are now shoved into our minds as the impossible contest between a behemoth of a data center and an enormously well-tested precise algorithm pointed directly at a brain remotely distant from primate.
 
-One communication was difficult through letters and male I could get lost missed or stolen communication seemed so enthralling but now as our means of communication have exploded we reach out to each other less and less.
+One communication was difficult through letters and mail I could get lost missed or stolen communication seemed so enthralling but now as our means of communication have exploded we reach out to each other less and less.
 
 In an age of distraction, it almost feels like boredom is a virtue because it implies that you've consciously stood away from the things that will rob you of a 5-minute walk in the park here, of a moment of watching the leaves rustle amidst the breeze.
 
@@ -32,3 +34,8 @@ I often feel surrounded by pessimist or Luddite types that fear a world were thi
 Today we live in an exciting, may I say _delicious_ collective bittersweetness and it's such an honor to be part of it.
 
 How will I look back on this?
+
+What is the antidote to the above vices?
+
+- To apathy and disinterest, it is clear that caring, that giving a f*ck, will be something that I will value more than ever.
+- To disconnection and isolation, hangouts under moonlights will be what I most wish to have.  Every minute of screen time I need to replace with friends and family time.

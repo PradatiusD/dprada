@@ -21,44 +21,48 @@
       </div>
 
       <BlogArticleContent :article="article" />
+      <BlogPostNavigation :current-slug="article.slug" />
     </section>
   </main>
 </template>
 
-<script>
+<script setup>
+import { computed } from 'vue'
+import BlogPostNavigation from '~/components/blog/BlogPostNavigation.vue'
 import { getBlogArticleBySlug } from '~/data/blog'
 
-export default {
-  name: 'BlogArticlePage',
+const route = useRoute()
+const article = computed(() => getBlogArticleBySlug(route.params.slug))
+
+definePageMeta({
   validate (route) {
     return Boolean(getBlogArticleBySlug(route.params.slug))
-  },
-  computed: {
-    article () {
-      return getBlogArticleBySlug(this.$route.params.slug)
-    }
-  },
-  head () {
-    if (!this.article) {
-      return {
-        title: 'Article Not Found | Daniel Prada'
-      }
-    }
-    return {
-      title: `${this.article.title} | Daniel Prada`,
-      meta: [
-        {
-          name: 'description',
-          content: this.article.excerpt
-        }
-      ],
-      link: [
-        {
-          rel: 'canonical',
-          href: `https://www.danielprada.co/blog/${this.article.slug}`
-        }
-      ]
-    }
   }
-}
+})
+
+useSeoMeta({
+  title: () => article.value ? `${article.value.title} | Daniel Prada` : 'Article Not Found | Daniel Prada',
+  description: () => article.value?.excerpt || '',
+  ogType: 'article',
+  ogTitle: () => article.value?.title || 'Daniel Prada',
+  ogDescription: () => article.value?.excerpt || '',
+  ogUrl: () => article.value ? `https://www.danielprada.co/blog/${article.value.slug}` : 'https://www.danielprada.co/blog',
+  ogImage: () => article.value ? `https://www.danielprada.co${article.value.ogImage}` : 'https://www.danielprada.co/images/og-image.png',
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: () => article.value ? `${article.value.title} — an essay by Daniel Prada` : 'Daniel Prada',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => article.value?.title || 'Daniel Prada',
+  twitterDescription: () => article.value?.excerpt || '',
+  twitterImage: () => article.value ? `https://www.danielprada.co${article.value.ogImage}` : 'https://www.danielprada.co/images/og-image.png'
+})
+
+useHead(() => ({
+  link: article.value
+    ? [{
+        rel: 'canonical',
+        href: `https://www.danielprada.co/blog/${article.value.slug}`
+      }]
+    : []
+}))
 </script>

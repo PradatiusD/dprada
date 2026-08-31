@@ -27,11 +27,16 @@
         v-for="article in articles"
         :key="article.slug"
       >
-        <p class="home-latest-date">
-          {{ article.publishedAt | formatDate() }}
-        </p>
+        <time
+          class="home-latest-date"
+          :datetime="article.publishedAt"
+        >
+          {{ formatBlogDate(article.publishedAt) }}
+        </time>
         <h2 class="home-latest-title">
-          {{ article.title }}
+          <NuxtLink :to="`/blog/${article.slug}`">
+            {{ article.title }}
+          </NuxtLink>
         </h2>
         <p class="home-latest-excerpt">
           {{ article.excerpt }}
@@ -68,8 +73,8 @@
 
 
     <UtilitiesFeaturedQuote
-      :quote="latestArticle.featuredQuote.quote"
-      :author="latestArticle.featuredQuote.author"
+      quote="It never ceases to amaze me: we all love ourselves more than other people, but care more about their opinion than our own."
+      author="Marcus Aurelius, Meditations"
       color="white"
       :author-appear-delay="8000"
       :disable-scroll-down="true"
@@ -83,7 +88,6 @@
 <script>
 import { SVG } from '@svgdotjs/svg.js'
 import { blogArticles, formatBlogDate } from '~/data/blog'
-import {formatDate} from "compatx";
 
 export default {
   name: 'HomeNavigator',
@@ -101,9 +105,6 @@ export default {
   computed: {
     latestArticle () {
       return this.articles[0]
-    },
-    latestArticleDate () {
-      return formatBlogDate(this.latestArticle.publishedAt)
     },
     mainTitleAnimationState () {
       return this.getAnimationKeys('isMainTitleAnimated')
@@ -146,9 +147,7 @@ export default {
     }
   },
   methods: {
-    formatDate() {
-      return formatDate
-    },
+    formatBlogDate,
     getAnimationKeys (key) {
       return {
         'transition-all duration-500 ease-in-out transform': true,

@@ -298,6 +298,11 @@ body {
     color: rgba(38, 27, 23, 0.88);
 }
 
+.blog-markdown strong {
+    font-family: "Sofia W01 Bold1446843", "sans-serif";
+    font-weight: 700;
+}
+
 .blog-markdown ul,
 .blog-markdown ol {
     display: grid;
