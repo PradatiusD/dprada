@@ -16,7 +16,7 @@
       Annualized hours spent physically with friends fell from about 376 hours in 2010 to 184 hours in 2024.
     </p>
 
-    <div class="friends-time-plot-wrap">
+    <BlogChartScroller class="friends-time-plot-wrap">
       <svg
         class="friends-time-plot"
         viewBox="0 0 760 330"
@@ -66,7 +66,7 @@
         </g>
         <text class="friends-axis-label" x="396" y="326" text-anchor="middle">Survey year</text>
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="friends-time-stats">
       <div><span>2010</span><strong>376 hr</strong><small>≈ 62 min/day</small></div>
@@ -134,7 +134,7 @@ export default {
 .friends-time-marker h2 { margin-top: 0.4rem; font-size: clamp(1.25rem, 3vw, 1.9rem); line-height: 1.08; }
 .friends-time-callout { flex: none; font-size: clamp(1.7rem, 5vw, 3.2rem); color: #bd6429; }
 .friends-time-deck { margin-top: 0.7rem; color: rgba(38, 27, 23, 0.72); }
-.friends-time-plot-wrap { margin-top: 1rem; overflow-x: auto; }
+.friends-time-plot-wrap { margin-top: 1rem; }
 .friends-time-plot { display: block; width: 100%; min-width: 560px; }
 .friends-grid line { stroke: rgba(38, 27, 23, 0.1); }
 .friends-area { fill: rgba(189, 100, 41, 0.12); }

@@ -10,7 +10,7 @@
 
     <p class="ai-infrastructure-deck">Annual average nominal price per kilowatt-hour, 1995–2024.</p>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg viewBox="0 0 760 340" role="img" aria-labelledby="electricity-price-chart-title electricity-price-chart-desc">
       <title id="electricity-price-chart-title">U.S. city-average electricity price per kilowatt-hour, 1995 to 2024</title>
       <desc id="electricity-price-chart-desc">A line chart of annual average electricity prices, from 9.36 cents per kilowatt-hour in 1995 to 17.57 cents in 2024.</desc>
@@ -25,7 +25,7 @@
       <path class="line" :d="linePath" />
       <circle :cx="xScale(latestPoint.year)" :cy="yScale(latestPoint.dollarsPerKwh)" r="5" />
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="ai-infrastructure-stats">
       <p><span>1995</span><strong>{{ formatPrice(firstPoint.dollarsPerKwh) }}</strong></p>

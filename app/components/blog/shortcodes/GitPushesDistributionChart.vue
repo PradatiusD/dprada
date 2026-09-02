@@ -21,7 +21,7 @@
       </span>
     </div>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg
         class="git-dist-svg"
       viewBox="0 0 1000 500"
@@ -138,7 +138,7 @@
         </text>
       </g>
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <p class="git-dist-note">
       Share is each country's quarterly push count divided by worldwide quarterly push count from the same dataset. Countries shown are the eight with largest aggregate volumes over the full period. Source: <a href="https://octoverse.github.com" target="_blank" rel="noopener noreferrer">GitHub Octoverse</a>.

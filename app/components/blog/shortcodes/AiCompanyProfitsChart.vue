@@ -26,7 +26,7 @@
       </span>
     </div>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg
         class="ai-profit-chart-svg"
       viewBox="0 0 1000 560"
@@ -150,7 +150,7 @@
         </text>
       </g>
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="ai-profit-chart-latest" aria-label="2025 net income by company">
       <div

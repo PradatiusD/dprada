@@ -10,7 +10,7 @@
 
     <p class="parenting-trend-deck">{{ deck }}</p>
 
-    <div class="parenting-trend-plot-wrap">
+    <BlogChartScroller class="parenting-trend-plot-wrap">
       <svg
         class="parenting-trend-plot"
         viewBox="0 0 760 330"
@@ -62,7 +62,7 @@
         </g>
         <text class="parenting-axis-label" x="398" y="326" text-anchor="middle">{{ xAxisLabel }}</text>
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="parenting-trend-stats">
       <div>
@@ -155,7 +155,7 @@ export default {
 .parenting-trend-marker h2 { margin-top: 0.4rem; font-size: clamp(1.25rem, 3vw, 1.9rem); line-height: 1.08; }
 .parenting-trend-heading > strong { flex: none; font-size: clamp(1.6rem, 5vw, 3rem); color: var(--marker-color); }
 .parenting-trend-deck { margin-top: 0.7rem; color: rgba(38, 27, 23, 0.72); }
-.parenting-trend-plot-wrap { margin-top: 1rem; overflow-x: auto; }
+.parenting-trend-plot-wrap { margin-top: 1rem; }
 .parenting-trend-plot { display: block; width: 100%; min-width: 590px; }
 .parenting-grid line { stroke: rgba(38, 27, 23, 0.1); }
 .parenting-area { fill: color-mix(in srgb, var(--marker-color) 12%, transparent); }

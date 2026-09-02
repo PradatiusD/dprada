@@ -23,7 +23,7 @@
       </span>
     </div>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg
         class="debt-chart-svg"
       viewBox="0 0 1000 560"
@@ -121,7 +121,7 @@
         r="5"
       />
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="debt-chart-summary">
       <p>

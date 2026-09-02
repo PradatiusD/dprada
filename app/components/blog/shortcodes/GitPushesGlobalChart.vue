@@ -10,7 +10,7 @@
       </p>
     </header>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg
         class="git-global-svg"
       viewBox="0 0 1000 500"
@@ -117,7 +117,7 @@
         </text>
       </g>
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <p class="git-global-note">
       Source: <a href="https://octoverse.github.com" target="_blank" rel="noopener noreferrer">GitHub Octoverse</a>, git push event counts by quarter. Counts include all public repositories and private repositories where GitHub tracks aggregate activity.

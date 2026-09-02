@@ -10,7 +10,7 @@
 
     <p class="compute-deck">Combined benchmark performance of the 500 systems on each November TOP500 list, 1995–2025. The vertical axis is logarithmic.</p>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg viewBox="0 0 760 350" role="img" aria-labelledby="top500-compute-chart-title top500-compute-chart-desc">
       <title id="top500-compute-chart-title">Combined performance of the systems in the November TOP500 lists, 1995 to 2025</title>
       <desc id="top500-compute-chart-desc">A logarithmic line chart showing combined TOP500 performance from 4.8 teraflops per second in 1995 to 15.0 exaflops per second in 2025.</desc>
@@ -24,7 +24,7 @@
       <path class="compute-line" :d="linePath" />
       <circle :cx="xScale(latestPoint.year)" :cy="yScale(latestPoint.totalGflops)" r="5" />
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="compute-stats">
       <p><span>1995 list total</span><strong>{{ formatCompute(firstPoint.totalGflops) }}</strong></p>

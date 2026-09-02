@@ -26,7 +26,7 @@
       </span>
     </div>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg
         class="ai-cash-flow-svg"
       viewBox="0 0 1000 560"
@@ -150,7 +150,7 @@
         </text>
       </g>
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="ai-cash-flow-latest" aria-label="2025 free cash flow by company">
       <div

@@ -23,7 +23,7 @@
       </span>
     </div>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg
         class="inequality-chart-svg"
       viewBox="0 0 1000 560"
@@ -115,7 +115,7 @@
         r="5"
       />
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="inequality-chart-summary">
       <p>

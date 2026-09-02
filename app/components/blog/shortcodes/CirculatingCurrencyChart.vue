@@ -12,7 +12,7 @@
       </p>
     </header>
 
-    <div class="blog-chart-scroll">
+    <BlogChartScroller>
       <svg
         class="currency-chart-svg"
       viewBox="0 0 1000 520"
@@ -82,7 +82,7 @@
         r="6"
       />
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="currency-chart-summary">
       <p>

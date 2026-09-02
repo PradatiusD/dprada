@@ -16,7 +16,7 @@
       Mean IQ-equivalent scores for Norwegian men born from 1967 through 1991. The peak cohort scored about 2.4 points above the 1991 cohort.
     </p>
 
-    <div class="iq-cohort-plot-wrap">
+    <BlogChartScroller class="iq-cohort-plot-wrap">
       <svg
         class="iq-cohort-plot"
         viewBox="0 0 760 330"
@@ -65,7 +65,7 @@
         </g>
         <text class="iq-axis-label" x="396" y="326" text-anchor="middle">Birth year</text>
       </svg>
-    </div>
+    </BlogChartScroller>
 
     <div class="iq-cohort-stats" aria-label="Selected cohort scores">
       <div><span>1967</span><strong>100.7</strong></div>
@@ -138,7 +138,7 @@ export default {
 .iq-cohort-marker h2 { margin-top: 0.4rem; font-size: clamp(1.25rem, 3vw, 1.9rem); line-height: 1.08; }
 .iq-cohort-callout { flex: none; font-size: clamp(1.7rem, 5vw, 3.2rem); color: #7b3aed; }
 .iq-cohort-deck { margin-top: 0.7rem; max-width: 58rem; color: rgba(38, 27, 23, 0.72); }
-.iq-cohort-plot-wrap { margin-top: 1rem; overflow-x: auto; }
+.iq-cohort-plot-wrap { margin-top: 1rem; }
 .iq-cohort-plot { display: block; width: 100%; min-width: 560px; }
 .iq-grid line { stroke: rgba(38, 27, 23, 0.1); }
 .iq-baseline { stroke: rgba(38, 27, 23, 0.3); stroke-dasharray: 5 5; }

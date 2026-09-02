@@ -22,9 +22,12 @@ import AiCompanyProfitsChart from '~/components/blog/shortcodes/AiCompanyProfits
 import AiElectricityEfficiencyMarker from '~/components/blog/shortcodes/AiElectricityEfficiencyMarker.vue'
 import BirthsPerWomanMarker from '~/components/blog/shortcodes/BirthsPerWomanMarker.vue'
 import CirculatingCurrencyChart from '~/components/blog/shortcodes/CirculatingCurrencyChart.vue'
+import CovidYoungChildrenScoresChart from '~/components/blog/shortcodes/CovidYoungChildrenScoresChart.vue'
 import DebtToGdpDefaultsBarChart from '~/components/blog/shortcodes/DebtToGdpDefaultsBarChart.vue'
 import ElectricityPriceMarker from '~/components/blog/shortcodes/ElectricityPriceMarker.vue'
 import FatherChildcareTimeMarker from '~/components/blog/shortcodes/FatherChildcareTimeMarker.vue'
+import FederalInterestRevenueChart from '~/components/blog/shortcodes/FederalInterestRevenueChart.vue'
+import FederalReserveAssetsChart from '~/components/blog/shortcodes/FederalReserveAssetsChart.vue'
 import GiniCpiChart from '~/components/blog/shortcodes/GiniCpiChart.vue'
 import GlobalPopulationProjectionMarker from '~/components/blog/shortcodes/GlobalPopulationProjectionMarker.vue'
 import InfantFormulaSupplementationMarker from '~/components/blog/shortcodes/InfantFormulaSupplementationMarker.vue'
@@ -32,6 +35,7 @@ import MedianAgeFirstBirthMarker from '~/components/blog/shortcodes/MedianAgeFir
 import MothersLaborForceMarker from '~/components/blog/shortcodes/MothersLaborForceMarker.vue'
 import NationalDebtGoldChart from '~/components/blog/shortcodes/NationalDebtGoldChart.vue'
 import NorwayIqCohortMarker from '~/components/blog/shortcodes/NorwayIqCohortMarker.vue'
+import ScreenTimeOverTimeChart from '~/components/blog/shortcodes/ScreenTimeOverTimeChart.vue'
 import SoftwareDeveloperOpeningsChart from '~/components/blog/shortcodes/SoftwareDeveloperOpeningsChart.vue'
 import SoftwareDeveloperWorkforceChart from '~/components/blog/shortcodes/SoftwareDeveloperWorkforceChart.vue'
 import TimeWithFriendsMarker from '~/components/blog/shortcodes/TimeWithFriendsMarker.vue'
@@ -47,8 +51,11 @@ const SHORTCODE_COMPONENTS = {
   AiElectricityEfficiencyMarker,
   BirthsPerWomanMarker,
   CirculatingCurrencyChart,
+  CovidYoungChildrenScoresChart,
   ElectricityPriceMarker,
   FatherChildcareTimeMarker,
+  FederalInterestRevenueChart,
+  FederalReserveAssetsChart,
   GiniCpiChart,
   GlobalPopulationProjectionMarker,
   InfantFormulaSupplementationMarker,
@@ -56,6 +63,7 @@ const SHORTCODE_COMPONENTS = {
   MothersLaborForceMarker,
   NationalDebtGoldChart,
   NorwayIqCohortMarker,
+  ScreenTimeOverTimeChart,
   DebtToGdpDefaultsBarChart,
   SoftwareDeveloperOpeningsChart,
   SoftwareDeveloperWorkforceChart,
