@@ -26,8 +26,9 @@
       </span>
     </div>
 
-    <svg
-      class="ai-profit-chart-svg"
+    <div class="blog-chart-scroll">
+      <svg
+        class="ai-profit-chart-svg"
       viewBox="0 0 1000 560"
       role="img"
       aria-labelledby="ai-profit-chart-title ai-profit-chart-description"
@@ -148,7 +149,8 @@
           {{ formatBillions(activePoint.point.netIncome) }} net income
         </text>
       </g>
-    </svg>
+      </svg>
+    </div>
 
     <div class="ai-profit-chart-latest" aria-label="2025 net income by company">
       <div

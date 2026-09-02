@@ -6,7 +6,7 @@
           Cost marker · 2022–2024
         </p>
         <h2 id="ai-cost-marker-title">
-          More capable, dramatically cheaper
+          AI capability benchmark cost
         </h2>
       </div>
       <strong class="ai-cost-marker-callout">280×+</strong>

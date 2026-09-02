@@ -2,7 +2,7 @@
   <ParentingTrendMarker
     marker-id="median-first-birth-age"
     kicker="Timing marker · U.S. first births"
-    title="The median first-time mother is about five years older"
+    title="Median age at first birth"
     callout="22 → 27"
     deck="Published national snapshots place the estimated median age at first birth at 22 in 1960, 24 in 1990, and 27 in 2023."
     chart-title="Estimated median age of U.S. mothers at first birth in 1960, 1990, and 2023"

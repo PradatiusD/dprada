@@ -2,7 +2,7 @@
   <ParentingTrendMarker
     marker-id="formula-supplementation"
     kicker="Infant-feeding marker · U.S. birth cohorts"
-    title="Early formula supplementation rose"
+    title="Early formula supplementation"
     callout="22.6%"
     deck="Among breastfed infants born in 2023, about one in five received formula before age two days."
     chart-title="Percentage of breastfed U.S. infants supplemented with formula before two days, birth cohorts 2016 to 2023"

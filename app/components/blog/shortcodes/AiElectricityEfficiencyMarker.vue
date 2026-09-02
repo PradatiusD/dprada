@@ -6,7 +6,7 @@
           Electricity marker · annual trend
         </p>
         <h2 id="ai-electricity-marker-title">
-          More computation from each watt
+          AI computation per watt
         </h2>
       </div>
       <strong class="ai-electricity-marker-callout">+40%/yr</strong>
@@ -158,8 +158,12 @@ export default {
   }
 
   .ai-electricity-bar-row {
-    grid-template-columns: 3.5rem minmax(0, 1fr) 2rem;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
+  }
+
+  .ai-electricity-bar-track {
+    grid-column: 1 / -1;
   }
 }
 </style>

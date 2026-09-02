@@ -5,7 +5,7 @@
         Sovereign default marker · events since 2020
       </p>
       <h2 id="recent-defaults-title" class="country-debt-chart-title">
-        Recent defaults occurred at very different debt levels
+        Sovereign defaults and debt-to-GDP levels
       </h2>
       <p class="country-debt-chart-copy">
         General government gross debt as a share of GDP in each country’s default year, with the United States’ 2025 estimate highlighted for context. The U.S. has not defaulted; a high ratio raises risk, but it is not a universal default threshold.

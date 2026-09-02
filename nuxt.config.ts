@@ -73,7 +73,7 @@ export default defineNuxtConfig({
       script: [
         {
           type: 'application/ld+json',
-          children: JSON.stringify({
+          innerHTML: JSON.stringify({
             '@context': 'http://schema.org/',
             '@type': 'Person',
             name: 'Daniel Prada',

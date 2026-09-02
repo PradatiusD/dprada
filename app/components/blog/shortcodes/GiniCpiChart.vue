@@ -5,7 +5,7 @@
         Prices and income inequality
       </p>
       <h2 class="inequality-chart-title">
-        Two measures, one long climb
+        Income inequality and consumer prices
       </h2>
       <p class="inequality-chart-copy">
         Consumer prices rose more than fourteenfold from 1947 to 2024, while the household Gini ratio moved from 0.376 to 0.456. The two lines use separate scales.
@@ -23,8 +23,9 @@
       </span>
     </div>
 
-    <svg
-      class="inequality-chart-svg"
+    <div class="blog-chart-scroll">
+      <svg
+        class="inequality-chart-svg"
       viewBox="0 0 1000 560"
       role="img"
       aria-labelledby="inequality-chart-title inequality-chart-description"
@@ -113,7 +114,8 @@
         class="inequality-chart-endpoint inequality-chart-endpoint-cpi"
         r="5"
       />
-    </svg>
+      </svg>
+    </div>
 
     <div class="inequality-chart-summary">
       <p>

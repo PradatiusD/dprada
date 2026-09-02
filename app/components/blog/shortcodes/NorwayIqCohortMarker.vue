@@ -6,7 +6,7 @@
           Cognitive marker · 25 birth cohorts
         </p>
         <h2 id="iq-cohort-title">
-          Mean test scores rose, peaked, then reversed
+          Norwegian conscript test scores by birth cohort
         </h2>
       </div>
       <strong class="iq-cohort-callout">−2.4</strong>
@@ -161,7 +161,11 @@ export default {
 .iq-cohort-note { margin-top: 1rem; font-size: 0.78rem; line-height: 1.55; color: rgba(38, 27, 23, 0.62); }
 .iq-cohort-note a { color: #7b3aed; text-decoration: underline; }
 @media (max-width: 620px) {
-  .iq-cohort-heading { align-items: start; }
+  .iq-cohort-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
   .iq-cohort-stats { grid-template-columns: 1fr; }
 }
 </style>

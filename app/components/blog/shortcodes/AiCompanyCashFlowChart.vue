@@ -26,8 +26,9 @@
       </span>
     </div>
 
-    <svg
-      class="ai-cash-flow-svg"
+    <div class="blog-chart-scroll">
+      <svg
+        class="ai-cash-flow-svg"
       viewBox="0 0 1000 560"
       role="img"
       aria-labelledby="ai-cash-flow-title ai-cash-flow-description"
@@ -148,7 +149,8 @@
           {{ formatBillions(activePoint.point.operatingCashFlow) }} operating cash − {{ formatBillions(activePoint.point.capitalExpenditures) }} capex
         </text>
       </g>
-    </svg>
+      </svg>
+    </div>
 
     <div class="ai-cash-flow-latest" aria-label="2025 free cash flow by company">
       <div

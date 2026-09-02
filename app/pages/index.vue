@@ -299,6 +299,14 @@ export default {
 @media screen and (max-width: 767px) {
   .home-latest-article {
     padding: 1.25rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    width: auto;
+  }
+
+  .home-latest-excerpt {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
 </style>

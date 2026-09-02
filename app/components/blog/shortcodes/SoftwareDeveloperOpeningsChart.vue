@@ -5,7 +5,7 @@
         Hiring marker · annual average, 2025–2035
       </p>
       <h2 id="software-openings-title">
-        106,100 openings each year
+        Projected annual software developer openings
       </h2>
       <p class="software-openings-copy">
         BLS projects this many annual opportunities for software developers, quality assurance analysts, and testers, on average over the decade.
@@ -213,7 +213,18 @@ export default {
 @media screen and (max-width: 640px) {
   .software-openings-visual,
   .software-openings-context {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .software-openings-visual > *,
+  .software-openings-scale {
+    min-width: 0;
+  }
+
+  .software-openings-scale-labels {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 }
 </style>

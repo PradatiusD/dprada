@@ -127,10 +127,14 @@ function markdownToContentBlocks (markdown: string) {
   for (const line of markdown.split('\n')) {
     const shortcodeMatch = line.trim().match(SHORTCODE_PATTERN)
     if (shortcodeMatch) {
+      const shortcodeName = shortcodeMatch[1]
+      if (!shortcodeName) {
+        throw new Error(`Invalid shortcode: ${line}`)
+      }
       flushMarkdownBuffer()
       blocks.push({
         type: 'shortcode',
-        name: shortcodeMatch[1]
+        name: shortcodeName
       })
       continue
     }

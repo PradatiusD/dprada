@@ -23,8 +23,9 @@
       </span>
     </div>
 
-    <svg
-      class="debt-chart-svg"
+    <div class="blog-chart-scroll">
+      <svg
+        class="debt-chart-svg"
       viewBox="0 0 1000 560"
       role="img"
       aria-labelledby="national-debt-chart-title national-debt-chart-desc"
@@ -119,7 +120,8 @@
         class="debt-chart-endcap debt-chart-endcap-gold"
         r="5"
       />
-    </svg>
+      </svg>
+    </div>
 
     <div class="debt-chart-summary">
       <p>

@@ -5,15 +5,16 @@
         Currency in circulation
       </p>
       <h2 class="currency-chart-title">
-        More dollars, year after year
+        Value of U.S. currency in circulation
       </h2>
       <p class="currency-chart-copy">
         The total value of U.S. currency in circulation has climbed from $458 billion in 1997 to more than $2.3 trillion in 2024.
       </p>
     </header>
 
-    <svg
-      class="currency-chart-svg"
+    <div class="blog-chart-scroll">
+      <svg
+        class="currency-chart-svg"
       viewBox="0 0 1000 520"
       role="img"
       aria-labelledby="currency-chart-title currency-chart-description"
@@ -80,7 +81,8 @@
         class="currency-chart-endpoint"
         r="6"
       />
-    </svg>
+      </svg>
+    </div>
 
     <div class="currency-chart-summary">
       <p>

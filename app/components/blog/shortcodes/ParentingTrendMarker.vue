@@ -176,5 +176,14 @@ export default {
 .parenting-trend-stats small { font-family: "Sofia W01 Regular1446825", "sans-serif"; color: rgba(38, 27, 23, 0.58); }
 .parenting-trend-note { margin-top: 1rem; font-size: 0.78rem; line-height: 1.55; color: rgba(38, 27, 23, 0.62); }
 .parenting-trend-note :deep(a) { color: #7b3aed; text-decoration: underline; }
-@media (max-width: 620px) { .parenting-trend-heading { align-items: start; flex-direction: column; } }
+@media (max-width: 620px) {
+  .parenting-trend-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .parenting-trend-stats {
+    grid-template-columns: 1fr;
+  }
+}
 </style>

@@ -133,6 +133,13 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
+    padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .blog-listing-grid {
+        padding: 0 0.25rem;
+    }
 }
 
 .blog-card {
@@ -225,6 +232,7 @@ body {
     border-radius: 1.75rem;
     padding: clamp(1.5rem, 4vw, 3rem);
     box-shadow: 0 28px 70px rgba(10, 7, 20, 0.24);
+    overflow-x: hidden;
 }
 
 .blog-article-header {
@@ -255,7 +263,15 @@ body {
 
 .blog-article-flow {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
+}
+
+.blog-article-flow > *,
+.blog-shortcode-block,
+.blog-shortcode-block > * {
+    min-width: 0;
+    max-width: 100%;
 }
 
 .blog-markdown {
@@ -265,6 +281,14 @@ body {
 
 .blog-shortcode-block {
     margin: 0.5rem 0;
+    overflow-wrap: anywhere;
+}
+
+.blog-chart-scroll {
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .blog-shortcode-missing {
@@ -633,8 +657,21 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .blog-markdown p {
+        line-height: 1.6;
+    }
+
+    .country-debt-chart-callout {
+        flex-wrap: wrap;
+        border-radius: 1rem;
+    }
+
     .country-debt-chart-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .country-debt-chart-row-country {
+        min-width: 0;
     }
 
     .country-debt-chart-bar-shell {
@@ -642,7 +679,24 @@ body {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .blog-article-page {
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    .blog-article-shell {
+        padding: 1rem;
+        border-radius: 1.25rem;
+    }
+}
+
 @media screen and (max-width: 767px) {
+    .blog-chart-scroll > svg {
+        width: 36rem !important;
+        max-width: none !important;
+    }
+
     .blog-hero {
         padding-top: 6rem;
     }
